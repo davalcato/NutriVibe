@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct NutriVibeApp: App {
+    @StateObject private var appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
+                .environmentObject(appState)
         }
     }
 }
