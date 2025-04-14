@@ -3,8 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		485626273C2D3969F27C52FA /* Pods_NutriVibe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8BA6A27A0512F093F79ECC /* Pods_NutriVibe.framework */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DAAAA8722D45C6E4004DB208 /* PBXContainerItemProxy */ = {
@@ -24,34 +28,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C8BA6A27A0512F093F79ECC /* Pods_NutriVibe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutriVibe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5792A235E0C76553BA53D076 /* Pods-NutriVibe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriVibe.release.xcconfig"; path = "Target Support Files/Pods-NutriVibe/Pods-NutriVibe.release.xcconfig"; sourceTree = "<group>"; };
+		BAC9AE323628EC3C68B4B843 /* Pods-NutriVibe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriVibe.debug.xcconfig"; path = "Target Support Files/Pods-NutriVibe/Pods-NutriVibe.debug.xcconfig"; sourceTree = "<group>"; };
 		DAAAA8602D45C6E2004DB208 /* NutriVibe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriVibe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAAA8712D45C6E4004DB208 /* NutriVibeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriVibeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAAA87B2D45C6E4004DB208 /* NutriVibeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriVibeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		DAAAA8622D45C6E2004DB208 /* NutriVibe */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NutriVibe;
-			sourceTree = "<group>";
-		};
-		DAAAA8742D45C6E4004DB208 /* NutriVibeTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NutriVibeTests;
-			sourceTree = "<group>";
-		};
-		DAAAA87E2D45C6E4004DB208 /* NutriVibeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NutriVibeUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DAAAA85D2D45C6E2004DB208 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485626273C2D3969F27C52FA /* Pods_NutriVibe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +62,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07681E8DC01F3A60E2B1A48E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAC9AE323628EC3C68B4B843 /* Pods-NutriVibe.debug.xcconfig */,
+				5792A235E0C76553BA53D076 /* Pods-NutriVibe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		893834BE8F0DF6B155BEED6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C8BA6A27A0512F093F79ECC /* Pods_NutriVibe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DAAAA8572D45C6E2004DB208 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +86,8 @@
 				DAAAA8742D45C6E4004DB208 /* NutriVibeTests */,
 				DAAAA87E2D45C6E4004DB208 /* NutriVibeUITests */,
 				DAAAA8612D45C6E2004DB208 /* Products */,
+				07681E8DC01F3A60E2B1A48E /* Pods */,
+				893834BE8F0DF6B155BEED6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +101,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DAAAA8622D45C6E2004DB208 /* NutriVibe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NutriVibe;
+			sourceTree = "<group>";
+		};
+		DAAAA8742D45C6E4004DB208 /* NutriVibeTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NutriVibeTests;
+			sourceTree = "<group>";
+		};
+		DAAAA87E2D45C6E4004DB208 /* NutriVibeUITests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NutriVibeUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,20 +129,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAAAA8852D45C6E4004DB208 /* Build configuration list for PBXNativeTarget "NutriVibe" */;
 			buildPhases = (
+				CE6D662D0ACE53FC8822DD8D /* [CP] Check Pods Manifest.lock */,
 				DAAAA85C2D45C6E2004DB208 /* Sources */,
 				DAAAA85D2D45C6E2004DB208 /* Frameworks */,
 				DAAAA85E2D45C6E2004DB208 /* Resources */,
+				276954B19D5269C3AF52DE36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				DAAAA8622D45C6E2004DB208 /* NutriVibe */,
-			);
 			name = NutriVibe;
-			packageProductDependencies = (
-			);
 			productName = NutriVibe;
 			productReference = DAAAA8602D45C6E2004DB208 /* NutriVibe.app */;
 			productType = "com.apple.product-type.application";
@@ -130,12 +157,7 @@
 			dependencies = (
 				DAAAA8732D45C6E4004DB208 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				DAAAA8742D45C6E4004DB208 /* NutriVibeTests */,
-			);
 			name = NutriVibeTests;
-			packageProductDependencies = (
-			);
 			productName = NutriVibeTests;
 			productReference = DAAAA8712D45C6E4004DB208 /* NutriVibeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -153,12 +175,7 @@
 			dependencies = (
 				DAAAA87D2D45C6E4004DB208 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				DAAAA87E2D45C6E4004DB208 /* NutriVibeUITests */,
-			);
 			name = NutriVibeUITests;
-			packageProductDependencies = (
-			);
 			productName = NutriVibeUITests;
 			productReference = DAAAA87B2D45C6E4004DB208 /* NutriVibeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -187,6 +204,7 @@
 				};
 			};
 			buildConfigurationList = DAAAA85B2D45C6E2004DB208 /* Build configuration list for PBXProject "NutriVibe" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -195,7 +213,6 @@
 			);
 			mainGroup = DAAAA8572D45C6E2004DB208;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = DAAAA8612D45C6E2004DB208 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -230,6 +247,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		276954B19D5269C3AF52DE36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NutriVibe/Pods-NutriVibe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NutriVibe/Pods-NutriVibe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NutriVibe/Pods-NutriVibe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE6D662D0ACE53FC8822DD8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NutriVibe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAAAA85C2D45C6E2004DB208 /* Sources */ = {
@@ -385,6 +444,7 @@
 		};
 		DAAAA8862D45C6E4004DB208 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAC9AE323628EC3C68B4B843 /* Pods-NutriVibe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -407,8 +467,14 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davalcato.NutriVibe;
@@ -424,6 +490,7 @@
 		};
 		DAAAA8872D45C6E4004DB208 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5792A235E0C76553BA53D076 /* Pods-NutriVibe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,8 +513,14 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks\"",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks\"",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davalcato.NutriVibe;
