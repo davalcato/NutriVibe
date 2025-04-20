@@ -86,28 +86,30 @@ struct LoginView: View {
                         .padding(.top, 10)
                 }
 
-                // Google & Facebook side-by-side
-                HStack(spacing: 20) {
-                    Button(action: handleGoogleSignIn) {
-                        HStack {
-                            Image(systemName: "globe")
-                            Text("Google")
-                        }
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.red)
-                        .cornerRadius(8)
+                // Google Sign-In Button
+                Button(action: handleGoogleSignIn) {
+                    HStack {
+                        Image(systemName: "globe")
+                        Text("Sign in with Google")
                     }
-
-                    FacebookLoginButton()
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .cornerRadius(8)
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.red)
+                    .cornerRadius(10)
                 }
                 .padding(.horizontal, 50)
                 .padding(.top, 10)
+
+                // Facebook Sign-In Button
+                FacebookLoginButton()
+                    .frame(height: 50)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 50)
+
 
                 // Toggle login/register mode
                 Button(action: {
