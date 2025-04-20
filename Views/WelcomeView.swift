@@ -121,7 +121,7 @@ struct WelcomeView: View {
                     .padding(.bottom, 20)
                     
                     // Next Button
-                    NavigationLink(destination: SignUpView(), isActive: $viewModel.isNavigating) {
+                    NavigationLink(destination: LoginView(loginData: LoginViewModel()), isActive: $viewModel.isNavigating) {
                         Button(action: {
                             viewModel.navigateToNextScreen()
                         }) {

@@ -7,7 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		485626273C2D3969F27C52FA /* Pods_NutriVibe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8BA6A27A0512F093F79ECC /* Pods_NutriVibe.framework */; };
+		C237650258CB24087701CED7 /* Pods_NutriVibe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3BE3AE4F4A272247BE4F53 /* Pods_NutriVibe.framework */; };
+		DA142E3B2DAF5162001BC831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA142E342DAF5162001BC831 /* AppDelegate.swift */; };
+		DA142E3C2DAF5162001BC831 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA142E312DAF5162001BC831 /* SignUpViewModel.swift */; };
+		DA142E3D2DAF5162001BC831 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA142E322DAF5162001BC831 /* WelcomeViewModel.swift */; };
+		DA142E3E2DAF5162001BC831 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA142E372DAF5162001BC831 /* SignUpView.swift */; };
+		DA142E3F2DAF5162001BC831 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA142E382DAF5162001BC831 /* SplashScreenView.swift */; };
+		DA142E402DAF5162001BC831 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA142E392DAF5162001BC831 /* WelcomeView.swift */; };
+		DA142E412DAF5162001BC831 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA142E352DAF5162001BC831 /* AppState.swift */; };
+		DA142E422DAF5162001BC831 /* PrivacyInfo.xcprivacy.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DA142E362DAF5162001BC831 /* PrivacyInfo.xcprivacy.rtf */; };
+		DA8823DD2DB573AD0095156F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA8823DC2DB573AD0095156F /* GoogleService-Info.plist */; };
+		DA8823E02DB584EF0095156F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8823DF2DB584EF0095156F /* Assets.xcassets */; };
+		DA8823E22DB586DD0095156F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8823E12DB586DD0095156F /* LoginView.swift */; };
+		DA8823E42DB587190095156F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8823E32DB587190095156F /* LoginViewModel.swift */; };
+		DA8823E62DB587470095156F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8823E52DB587470095156F /* CustomTextField.swift */; };
+		DA8823E82DB58B220095156F /* FacebookLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8823E72DB58B220095156F /* FacebookLoginButton.swift */; };
+		DAE121F32DB1E70800D8548D /* NutriVibeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE121F22DB1E70800D8548D /* NutriVibeApp.swift */; };
+		DAE121F52DB1E75D00D8548D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE121F42DB1E75D00D8548D /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +44,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C8BA6A27A0512F093F79ECC /* Pods_NutriVibe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutriVibe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5792A235E0C76553BA53D076 /* Pods-NutriVibe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriVibe.release.xcconfig"; path = "Target Support Files/Pods-NutriVibe/Pods-NutriVibe.release.xcconfig"; sourceTree = "<group>"; };
-		BAC9AE323628EC3C68B4B843 /* Pods-NutriVibe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriVibe.debug.xcconfig"; path = "Target Support Files/Pods-NutriVibe/Pods-NutriVibe.debug.xcconfig"; sourceTree = "<group>"; };
+		52CB0077E222B5F97B347E88 /* Pods-NutriVibe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriVibe.debug.xcconfig"; path = "Target Support Files/Pods-NutriVibe/Pods-NutriVibe.debug.xcconfig"; sourceTree = "<group>"; };
+		85DDC9AF96A06598C224D68F /* Pods-NutriVibe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriVibe.release.xcconfig"; path = "Target Support Files/Pods-NutriVibe/Pods-NutriVibe.release.xcconfig"; sourceTree = "<group>"; };
+		8C3BE3AE4F4A272247BE4F53 /* Pods_NutriVibe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutriVibe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA142E312DAF5162001BC831 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		DA142E322DAF5162001BC831 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		DA142E342DAF5162001BC831 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA142E352DAF5162001BC831 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		DA142E362DAF5162001BC831 /* PrivacyInfo.xcprivacy.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = PrivacyInfo.xcprivacy.rtf; sourceTree = "<group>"; };
+		DA142E372DAF5162001BC831 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DA142E382DAF5162001BC831 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		DA142E392DAF5162001BC831 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		DA8823DC2DB573AD0095156F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DA8823DF2DB584EF0095156F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA8823E12DB586DD0095156F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DA8823E32DB587190095156F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DA8823E52DB587470095156F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		DA8823E72DB58B220095156F /* FacebookLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginButton.swift; sourceTree = "<group>"; };
 		DAAAA8602D45C6E2004DB208 /* NutriVibe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriVibe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAAA8712D45C6E4004DB208 /* NutriVibeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriVibeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAAA87B2D45C6E4004DB208 /* NutriVibeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriVibeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE121F22DB1E70800D8548D /* NutriVibeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriVibeApp.swift; sourceTree = "<group>"; };
+		DAE121F42DB1E75D00D8548D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				485626273C2D3969F27C52FA /* Pods_NutriVibe.framework in Frameworks */,
+				C237650258CB24087701CED7 /* Pods_NutriVibe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,29 +97,61 @@
 		07681E8DC01F3A60E2B1A48E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BAC9AE323628EC3C68B4B843 /* Pods-NutriVibe.debug.xcconfig */,
-				5792A235E0C76553BA53D076 /* Pods-NutriVibe.release.xcconfig */,
+				52CB0077E222B5F97B347E88 /* Pods-NutriVibe.debug.xcconfig */,
+				85DDC9AF96A06598C224D68F /* Pods-NutriVibe.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		893834BE8F0DF6B155BEED6D /* Frameworks */ = {
+		1C5E864B2BA9DF787BA87001 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1C8BA6A27A0512F093F79ECC /* Pods_NutriVibe.framework */,
+				8C3BE3AE4F4A272247BE4F53 /* Pods_NutriVibe.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA142E332DAF5162001BC831 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DA142E312DAF5162001BC831 /* SignUpViewModel.swift */,
+				DA8823DC2DB573AD0095156F /* GoogleService-Info.plist */,
+				DA142E322DAF5162001BC831 /* WelcomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DA142E3A2DAF5162001BC831 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA142E342DAF5162001BC831 /* AppDelegate.swift */,
+				DA142E352DAF5162001BC831 /* AppState.swift */,
+				DA142E362DAF5162001BC831 /* PrivacyInfo.xcprivacy.rtf */,
+				DA142E372DAF5162001BC831 /* SignUpView.swift */,
+				DA142E382DAF5162001BC831 /* SplashScreenView.swift */,
+				DA142E392DAF5162001BC831 /* WelcomeView.swift */,
+				DAE121F22DB1E70800D8548D /* NutriVibeApp.swift */,
+				DAE121F42DB1E75D00D8548D /* ContentView.swift */,
+				DA8823DF2DB584EF0095156F /* Assets.xcassets */,
+				DA8823E12DB586DD0095156F /* LoginView.swift */,
+				DA8823E32DB587190095156F /* LoginViewModel.swift */,
+				DA8823E52DB587470095156F /* CustomTextField.swift */,
+				DA8823E72DB58B220095156F /* FacebookLoginButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DAAAA8572D45C6E2004DB208 = {
 			isa = PBXGroup;
 			children = (
+				DA142E332DAF5162001BC831 /* ViewModels */,
+				DA142E3A2DAF5162001BC831 /* Views */,
 				DAAAA8622D45C6E2004DB208 /* NutriVibe */,
 				DAAAA8742D45C6E4004DB208 /* NutriVibeTests */,
 				DAAAA87E2D45C6E4004DB208 /* NutriVibeUITests */,
 				DAAAA8612D45C6E2004DB208 /* Products */,
 				07681E8DC01F3A60E2B1A48E /* Pods */,
-				893834BE8F0DF6B155BEED6D /* Frameworks */,
+				1C5E864B2BA9DF787BA87001 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,11 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAAAA8852D45C6E4004DB208 /* Build configuration list for PBXNativeTarget "NutriVibe" */;
 			buildPhases = (
-				CE6D662D0ACE53FC8822DD8D /* [CP] Check Pods Manifest.lock */,
+				92CD0122A3BDA355BCEB7EB5 /* [CP] Check Pods Manifest.lock */,
 				DAAAA85C2D45C6E2004DB208 /* Sources */,
 				DAAAA85D2D45C6E2004DB208 /* Frameworks */,
 				DAAAA85E2D45C6E2004DB208 /* Resources */,
-				276954B19D5269C3AF52DE36 /* [CP] Embed Pods Frameworks */,
+				CAE2F07678453E4C0864241F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,6 +293,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA142E422DAF5162001BC831 /* PrivacyInfo.xcprivacy.rtf in Resources */,
+				DA8823E02DB584EF0095156F /* Assets.xcassets in Resources */,
+				DA8823DD2DB573AD0095156F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,24 +316,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		276954B19D5269C3AF52DE36 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NutriVibe/Pods-NutriVibe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NutriVibe/Pods-NutriVibe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NutriVibe/Pods-NutriVibe-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE6D662D0ACE53FC8822DD8D /* [CP] Check Pods Manifest.lock */ = {
+		92CD0122A3BDA355BCEB7EB5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,6 +338,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CAE2F07678453E4C0864241F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NutriVibe/Pods-NutriVibe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NutriVibe/Pods-NutriVibe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NutriVibe/Pods-NutriVibe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -295,6 +362,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA142E3B2DAF5162001BC831 /* AppDelegate.swift in Sources */,
+				DA142E3C2DAF5162001BC831 /* SignUpViewModel.swift in Sources */,
+				DA8823E42DB587190095156F /* LoginViewModel.swift in Sources */,
+				DA142E3D2DAF5162001BC831 /* WelcomeViewModel.swift in Sources */,
+				DA142E3E2DAF5162001BC831 /* SignUpView.swift in Sources */,
+				DA142E3F2DAF5162001BC831 /* SplashScreenView.swift in Sources */,
+				DAE121F52DB1E75D00D8548D /* ContentView.swift in Sources */,
+				DA142E402DAF5162001BC831 /* WelcomeView.swift in Sources */,
+				DA8823E62DB587470095156F /* CustomTextField.swift in Sources */,
+				DAE121F32DB1E70800D8548D /* NutriVibeApp.swift in Sources */,
+				DA8823E22DB586DD0095156F /* LoginView.swift in Sources */,
+				DA142E412DAF5162001BC831 /* AppState.swift in Sources */,
+				DA8823E82DB58B220095156F /* FacebookLoginButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +524,7 @@
 		};
 		DAAAA8862D45C6E4004DB208 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAC9AE323628EC3C68B4B843 /* Pods-NutriVibe.debug.xcconfig */;
+			baseConfigurationReference = 52CB0077E222B5F97B347E88 /* Pods-NutriVibe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +535,7 @@
 				DEVELOPMENT_TEAM = QFQW29JWKY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -475,7 +556,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davalcato.NutriVibe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -490,7 +571,7 @@
 		};
 		DAAAA8872D45C6E4004DB208 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5792A235E0C76553BA53D076 /* Pods-NutriVibe.release.xcconfig */;
+			baseConfigurationReference = 85DDC9AF96A06598C224D68F /* Pods-NutriVibe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -501,6 +582,7 @@
 				DEVELOPMENT_TEAM = QFQW29JWKY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -521,7 +603,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks\"",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davalcato.NutriVibe;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,5 +1,8 @@
 # Uncomment the next line to define a global platform for your project
-  platform :ios, '16.0'
+  source 'https://github.com/CocoaPods/Specs.git'  # Default source
+source 'https://github.com/your_custom_repo'    # Custom source for the pod
+
+platform :ios, '16.0'
 
 install! 'cocoapods', :generate_multiple_pod_projects => false
 
@@ -13,6 +16,8 @@ target 'NutriVibe' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
+
+  pod 'openssl_grpc'  # Make sure this is correct
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
@@ -32,6 +37,8 @@ target 'NutriVibe' do
     end
   end
 end
+
+
 
 
 
