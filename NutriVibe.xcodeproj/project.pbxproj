@@ -118,6 +118,8 @@
 			children = (
 				DA142E312DAF5162001BC831 /* SignUpViewModel.swift */,
 				DA8823DC2DB573AD0095156F /* GoogleService-Info.plist */,
+				DAC632362DB59F150073D8C4 /* GoogleSignInHelper.swift */,
+				DA8823E32DB587190095156F /* LoginViewModel.swift */,
 				DA142E322DAF5162001BC831 /* WelcomeViewModel.swift */,
 			);
 			path = ViewModels;
@@ -126,20 +128,12 @@
 		DA142E3A2DAF5162001BC831 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DA142E342DAF5162001BC831 /* AppDelegate.swift */,
-				DAE121F22DB1E70800D8548D /* NutriVibeApp.swift */,
-				DA142E352DAF5162001BC831 /* AppState.swift */,
 				DA142E362DAF5162001BC831 /* PrivacyInfo.xcprivacy.rtf */,
 				DA142E372DAF5162001BC831 /* SignUpView.swift */,
-				DA142E382DAF5162001BC831 /* SplashScreenView.swift */,
-				DA142E392DAF5162001BC831 /* WelcomeView.swift */,
-				DAE121F42DB1E75D00D8548D /* ContentView.swift */,
-				DA8823DF2DB584EF0095156F /* Assets.xcassets */,
 				DA8823E12DB586DD0095156F /* LoginView.swift */,
-				DA8823E32DB587190095156F /* LoginViewModel.swift */,
-				DA8823E52DB587470095156F /* CustomTextField.swift */,
-				DA8823E72DB58B220095156F /* FacebookLoginButton.swift */,
-				DAC632362DB59F150073D8C4 /* GoogleSignInHelper.swift */,
+				DA142E392DAF5162001BC831 /* WelcomeView.swift */,
+				DA8823DF2DB584EF0095156F /* Assets.xcassets */,
+				DAFAC63B2DB841DB00D8F090 /* App */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,8 +141,15 @@
 		DAAAA8572D45C6E2004DB208 = {
 			isa = PBXGroup;
 			children = (
-				DA142E332DAF5162001BC831 /* ViewModels */,
 				DA142E3A2DAF5162001BC831 /* Views */,
+				DAFAC63D2DB8452500D8F090 /* Shared */,
+				DAFAC63C2DB8450C00D8F090 /* Onboarding */,
+				DA142E332DAF5162001BC831 /* ViewModels */,
+				DAFAC6382DB8407500D8F090 /* Utilities */,
+				DAFAC6352DB83FE700D8F090 /* Models */,
+				DAFAC63A2DB8409100D8F090 /* Resources */,
+				DAFAC6392DB8408400D8F090 /* Extensions */,
+				DAFAC6372DB8402D00D8F090 /* Services */,
 				DAAAA8622D45C6E2004DB208 /* NutriVibe */,
 				DAAAA8742D45C6E4004DB208 /* NutriVibeTests */,
 				DAAAA87E2D45C6E4004DB208 /* NutriVibeUITests */,
@@ -187,6 +188,69 @@
 			children = (
 			);
 			path = NutriVibeUITests;
+			sourceTree = "<group>";
+		};
+		DAFAC6352DB83FE700D8F090 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DAFAC6372DB8402D00D8F090 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DAFAC6382DB8407500D8F090 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DAFAC6392DB8408400D8F090 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DAFAC63A2DB8409100D8F090 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DAFAC63B2DB841DB00D8F090 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DA142E342DAF5162001BC831 /* AppDelegate.swift */,
+				DAE121F22DB1E70800D8548D /* NutriVibeApp.swift */,
+				DA142E352DAF5162001BC831 /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DAFAC63C2DB8450C00D8F090 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DA142E382DAF5162001BC831 /* SplashScreenView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DAFAC63D2DB8452500D8F090 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DA8823E72DB58B220095156F /* FacebookLoginButton.swift */,
+				DA8823E52DB587470095156F /* CustomTextField.swift */,
+				DAE121F42DB1E75D00D8548D /* ContentView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
