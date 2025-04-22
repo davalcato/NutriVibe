@@ -43,7 +43,7 @@ struct CustomTextField: View {
 
 
 #Preview {
-    @State var email = "test@example.com"
+    @Previewable @State var email = "test@example.com"
     @State var showPassword = false
 
     return CustomTextField(
