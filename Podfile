@@ -1,42 +1,46 @@
 # Uncomment the next line to define a global platform for your project
-  source 'https://github.com/CocoaPods/Specs.git'  # Default source
-source 'https://github.com/your_custom_repo'    # Custom source for the pod
+  platform :ios, '16.0'
 
-platform :ios, '16.0'
+# Only use CDN (no other sources)
+source 'https://cdn.cocoapods.org/'
 
-install! 'cocoapods', :generate_multiple_pod_projects => false
+install! 'cocoapods',
+  :generate_multiple_pod_projects => false
 
 target 'NutriVibe' do
   use_frameworks!
   use_modular_headers!
 
-  pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
+  # Firebase
+  pod 'FirebaseCore'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
 
+  # Facebook
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
 
-  pod 'openssl_grpc'  # Make sure this is correct
+  # Google
+  pod 'GoogleSignIn'
+  pod 'GoogleSignInSwiftSupport'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
-      # Set build configurations
       target.build_configurations.each do |config|
         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.0'
         config.build_settings['EXCLUDED_ARCHITECTURES'] = 'i386'
         config.build_settings['ARCHS'] = 'arm64'
-
-        # Fix for LD_RUNPATH_SEARCH_PATHS override warning
-        if config.build_settings['LD_RUNPATH_SEARCH_PATHS']
-          config.build_settings['LD_RUNPATH_SEARCH_PATHS'] = "$(inherited) " + config.build_settings['LD_RUNPATH_SEARCH_PATHS']
-        else
-          config.build_settings['LD_RUNPATH_SEARCH_PATHS'] = "$(inherited)"
-        end
       end
     end
   end
 end
+
+
+
+
+
+
 
 
 

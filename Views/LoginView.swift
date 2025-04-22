@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
-import FBSDKLoginKit
+import GoogleSignIn
+import GoogleSignInSwift
+import FirebaseAuth
 
 struct LoginView: View {
     @ObservedObject var loginData: LoginViewModel
@@ -15,123 +17,138 @@ struct LoginView: View {
     @State private var showSuccessMessage = false
     @State private var showFailureMessage = false
 
+    // Google Sign-In Helper
+    @StateObject private var googleSignInHelper = GoogleSignInHelper()
+
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                Text(loginData.registerUser ? "Create Account" : "Welcome Back")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.top, 40)
+            ZStack {
+                // Background Gradient
+                LinearGradient(gradient: Gradient(colors: [Color.purple.opacity(0.4), Color.blue.opacity(0.6)]),
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
 
-                // Email Field
-                CustomTextField(
-                    icon: "envelope",
-                    title: "Email",
-                    hint: "example@example.com",
-                    value: $loginData.email,
-                    isSecure: false,
-                    showPassword: .constant(false)
-                )
-                .padding(.horizontal, 50)
+                VStack {
+                    Spacer()
 
-                // Password Field
-                CustomTextField(
-                    icon: "lock",
-                    title: "Password",
-                    hint: "Enter your password",
-                    value: $loginData.password,
-                    isSecure: true,
-                    showPassword: $loginData.showPassword
-                )
-                .padding(.horizontal, 50)
-
-                // Re-enter Password (only for Register)
-                if loginData.registerUser {
-                    CustomTextField(
-                        icon: "lock",
-                        title: "Re-enter Password",
-                        hint: "Re-enter your password",
-                        value: $loginData.reEnterPassword,
-                        isSecure: true,
-                        showPassword: $loginData.showReEnterPassword
-                    )
-                    .padding(.horizontal, 50)
-                }
-
-                // Login/Register Button
-                Button(action: handleAuthAction) {
-                    Text(loginData.registerUser ? "Register" : "Login")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
+                    // Title
+                    Text(loginData.registerUser ? "Create Your Account" : "Welcome Back")
+                        .font(.system(size: 34, weight: .bold))
                         .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .padding(.horizontal, 50)
-                }
-                .alert(isPresented: $showErrorAlert) {
-                    Alert(title: Text("Error"), message: Text(loginData.errorMessage), dismissButton: .default(Text("OK")))
-                }
+                        .padding(.bottom, 30)
 
-                if showSuccessMessage {
-                    Text("Registration successful!")
-                        .foregroundColor(.green)
+                    // Glassmorphism Card
+                    VStack(spacing: 16) {
+                        CustomTextField(
+                            icon: "envelope.fill",
+                            title: "Email",
+                            hint: "example@email.com",
+                            value: $loginData.email,
+                            isSecure: false,
+                            showPassword: .constant(false)
+                        )
+
+                        CustomTextField(
+                            icon: "lock.fill",
+                            title: "Password",
+                            hint: "Enter your password",
+                            value: $loginData.password,
+                            isSecure: true,
+                            showPassword: $loginData.showPassword
+                        )
+
+                        if loginData.registerUser {
+                            CustomTextField(
+                                icon: "lock.rotation",
+                                title: "Re-enter Password",
+                                hint: "Re-enter password",
+                                value: $loginData.reEnterPassword,
+                                isSecure: true,
+                                showPassword: $loginData.showReEnterPassword
+                            )
+                        }
+
+                        // Login/Register Button
+                        Button(action: handleAuthAction) {
+                            Text(loginData.registerUser ? "Register" : "Login")
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue.opacity(0.9))
+                                .foregroundColor(.white)
+                                .cornerRadius(12)
+                        }
+
+                        if showSuccessMessage {
+                            Text("✅ Registration successful!")
+                                .foregroundColor(.green)
+                                .transition(.opacity)
+                        }
+
+                        if showFailureMessage {
+                            Text("❌ Registration failed. Try again.")
+                                .foregroundColor(.red)
+                                .transition(.opacity)
+                        }
+
+                        // Google Sign-In
+                        Button(action: handleGoogleSignIn) {
+                            HStack(spacing: 12) {
+                                Image(systemName: "globe")
+                                Text("Sign in with Google")
+                            }
+                            .font(.subheadline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.red.opacity(0.8))
+                            .cornerRadius(10)
+                        }
+
+                        // Facebook Sign-In
+                        FacebookLoginButton()
+                            .frame(height: 44)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue.opacity(0.8))
+                            .cornerRadius(10)
+
+                        // Toggle login/register mode
+                        Button(action: {
+                            withAnimation {
+                                loginData.registerUser.toggle()
+                            }
+                        }) {
+                            Text(loginData.registerUser ? "Already have an account? Login" : "Don’t have an account? Register")
+                                .font(.footnote)
+                                .foregroundColor(.white)
+                        }
                         .padding(.top, 10)
-                }
-
-                if showFailureMessage {
-                    Text("Registration failed. Please try again.")
-                        .foregroundColor(.red)
-                        .padding(.top, 10)
-                }
-
-                // Google Sign-In Button
-                Button(action: handleGoogleSignIn) {
-                    HStack {
-                        Image(systemName: "globe")
-                        Text("Sign in with Google")
                     }
-                    .font(.headline)
-                    .foregroundColor(.white)
                     .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.red)
-                    .cornerRadius(10)
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(20)
+                    .padding(.horizontal, 24)
+                    .shadow(radius: 10)
+
+                    Spacer()
                 }
-                .padding(.horizontal, 50)
-                .padding(.top, 10)
-
-                // Facebook Sign-In Button
-                FacebookLoginButton()
-                    .frame(height: 50)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-                    .padding(.horizontal, 50)
-
-
-                // Toggle login/register mode
-                Button(action: {
-                    loginData.registerUser.toggle()
-                }) {
-                    Text(loginData.registerUser ? "Already have an account? Login" : "Don't have an account? Register")
-                        .foregroundColor(.blue)
-                        .padding(.top, 20)
-                }
-
-                Spacer()
             }
             .navigationBarHidden(true)
-            .background(
-                GeometryReader { _ in
-                    Color.clear
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                        }
+            .alert(isPresented: $showErrorAlert) {
+                Alert(title: Text("Error"), message: Text(loginData.errorMessage), dismissButton: .default(Text("OK")))
+            }
+            .onReceive(googleSignInHelper.$signInResult) { result in
+                guard let result = result else { return }
+                
+                switch result {
+                case .success(_):
+                    appState.isLoggedIn = true
+                case .failure(let error):
+                    loginData.errorMessage = error.localizedDescription
+                    showErrorAlert = true
                 }
-            )
+            }
         }
     }
 
@@ -174,12 +191,14 @@ struct LoginView: View {
     }
 
     private func handleGoogleSignIn() {
-        // Add your Google Sign-In logic here
-        print("Google Sign-In tapped")
+        googleSignInHelper.signIn()
     }
 }
 
+
 #Preview {
     LoginView(loginData: LoginViewModel())
+        .environmentObject(AppState())
 }
+
 

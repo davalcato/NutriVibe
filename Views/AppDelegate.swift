@@ -10,13 +10,14 @@ import FirebaseCore
 import FBSDKCoreKit
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        // Initialize Firebase
         FirebaseApp.configure()
 
+        // Initialize Facebook SDK
         ApplicationDelegate.shared.application(
             application,
             didFinishLaunchingWithOptions: launchOptions
@@ -28,8 +29,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(
         _ app: UIApplication,
         open url: URL,
-        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+        options: [UIApplication.OpenURLOptionsKey: Any] = [:]
     ) -> Bool {
+        // Facebook login handling
         return ApplicationDelegate.shared.application(
             app,
             open: url,
@@ -46,5 +48,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 }
+
 
 
